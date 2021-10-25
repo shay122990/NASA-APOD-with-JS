@@ -3,13 +3,21 @@
 ## About The Project
 
 In this project, we incorporate NASA API to get random astronomy pictures of the day. So, you will have these cards that will display an image, title, add to favorites option, description, date and copyright information. <br/>
-If you click on an image you can view it in full resolution in a new tab. You can also add those cards to your favorites page via local storage. Once you've added the image, a message will display, notifying you that it's been done. Then you can navigate to your Favorites page and see your favorite images there. You can also remove a favorite from your favorites page. Then you have an option to load more images which lazy loads another 10 random images. Lastly, it is mobile responsive. <br/>
+If you click on an image you can view it in full resolution in a new tab. You can also add those cards to your favorites page via local storage. Once you've added the image, a message will display, notifying you that it's been done. Then you can navigate to your Favorites page and see your favorite images there. You can also remove a favorite from your favorites page. Then you have an option to load more images which lazy loads another 20 random images. Lastly, it is mobile responsive. <br/>
 This is intended to anyone who would like to improve their vanilla JS skills, or maybe apply some of the methods to their own projects.
+<br/>
+I personally love to learn about space, so I use this project as my load up page on my browser, so everyday I see incredible images and learn something new.
 
 ## Preview
 
-![Initial view](media/image1.gif)
-![Final view](media/image2.gif)
+Loader <br/>
+![Loader](media/image1.gif) <br/>
+Add/remove favorites <br/>
+![add/remove favorties](media/image2.gif) <br/>
+View Image <br/>
+![View Image](media/image3.gif) <br/>
+Mobile View <br/>
+![Mobile](media/image4.gif)
 
 ## Built With
 

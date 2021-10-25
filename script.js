@@ -55,10 +55,10 @@ function createDomNodes(page) {
    const saveText = document.createElement('p');
    saveText.classList.add('clickable');
     if (page === 'data') {
-      saveText.textContent = 'Add To Favorites';
+      saveText.textContent = 'Add To Favorites +';
       saveText.setAttribute('onclick', `saveFavorite('${data.url}')`);
     } else {
-      saveText.textContent = 'Remove Favorite';
+      saveText.textContent = 'Remove Favorite -';
       saveText.setAttribute('onclick', `removeFavorite('${data.url}')`);
    }
    //Card Text
