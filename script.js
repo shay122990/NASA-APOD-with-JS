@@ -5,15 +5,15 @@ const imgContainer = document.querySelector('.images-container');
 const saveConfirmed = document.querySelector('.save-confirmed');
 
 
-
-// NASA API //////////////////
+// NASA API                  -------------------------------------
 const count = 20;
 const apiKey = 'SM4XqSFkGfYk4dg8OVRg8vBpNAoiPpIHXwVDljmP'
 const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=${count}`;
 
 let dataArray = [];
+let favorites = {};
 
-// Update DOM = Create a card
+// Update DOM = Create a card -------------------------------------
 function updateDom() {
   dataArray.forEach((data) => {
      // Card Container
@@ -41,6 +41,7 @@ function updateDom() {
     const saveText = document.createElement('p');
     saveText.classList.add('clickable');
     saveText.textContent = 'Add To Favorites';
+    saveText.setAttribute('onclick', `saveFavorite('${data.url}')`);
     //Card Text
     const cardText = document.createElement('p');
     cardText.classList.add('card-text')
@@ -63,7 +64,8 @@ function updateDom() {
     imgContainer.appendChild(card);
   });
 }
-//Get 20 images from NASA API
+
+//Get 20 images from NASA API ----------------------------
 async function getImages() {
   try {
     const response = await fetch(apiUrl);
@@ -74,6 +76,23 @@ async function getImages() {
     console.log(error);
   }
 }
+//Add data to favorites        ----------------------------
+function saveFavorite(itemUrl) {
+  //Looping through Data Array to select Favorites and see if favorites key already exists
+  dataArray.forEach((item) => {
+    if (item.url.includes(itemUrl) && !favorites[itemUrl]) {
+      favorites[itemUrl] = item;
+      //Show Save Confirmation for 2 secs
+      saveConfirmed.hidden = false;
+      setTimeout(() => {
+        saveConfirmed.hidden = true;
+      }, 2000);
+      //Set Favorites in localStorage
+      localStorage.setItem('nasaFavorites', JSON.stringify(favorites));
+    }
+  })
+}
+
 
 //On Load
 getImages();
