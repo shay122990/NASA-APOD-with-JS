@@ -7,6 +7,7 @@ const saveConfirmed = document.querySelector('.save-confirmed');
 
 // NASA API                  -------------------------------------
 const count = 20;
+//This is generic key, and no user data is attached to this key.
 const apiKey = 'SM4XqSFkGfYk4dg8OVRg8vBpNAoiPpIHXwVDljmP'
 const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=${count}`;
 

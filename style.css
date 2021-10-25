@@ -43,9 +43,10 @@ body {
 }
 
 .nav-items {
-  font-size: 20px;
+  font-size: 25px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .background {
@@ -56,7 +57,13 @@ body {
   height: 60px;
   z-index: -1;
 }
+.break {
+  margin-top: 20px;
+  font-size: 40px;
+}
 .clickable {
+  margin-top: 10px;
+  letter-spacing: 2px;
   cursor: pointer;
   color: white;
   user-select: none;
@@ -130,6 +137,9 @@ body {
   }
   .save-confirmed {
     top: 40%;
-    left: 30%;
+    left: 32%;
+  }
+  .clickable {
+    letter-spacing: 1px;
   }
 }
